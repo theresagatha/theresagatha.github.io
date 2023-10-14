@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Poppins&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(18,27,60);
+    background: radial-gradient(circle, rgba(18,27,60,1) 0%, rgba(25,34,73,1) 50%, rgba(36,56,127,1) 100%);
+}
+
+.box-block-left-top, .box-block-right {
+    padding: 150px 50px 0 50px;
+}
+
+.box-block-right {
+    font-family: 'Poppins', sans-serif;
+}
+
+.product-img {
+    width: 200px;
+    height: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-name-top, .product-name-bottom {
+    text-align: center;
+    font-family: 'Belleza', sans-serif;
+    color: #f4b800;
+}
+
+.product-name-top {
+    font-size: 78px;
+}
+
+.product-name-bottom {
+    font-size: 30px;
+}
+
+.product-desc {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box-block-left-bottom {
+    background: #f4b800;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.form-title {
+    margin: 20px 10px;
+    text-decoration: underline;
+    color: #f4b800;
+}
+
+.form-group {
+    margin: 10px 0;
+    color: #f4b800;
+}
+
+.btn-custom {
+    margin: 10px 0;
+    color: #121b3c;
+}
