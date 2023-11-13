@@ -490,7 +490,7 @@ billingForm.addEventListener("submit", (e) => {
         url_wa += encodeURI(key +': '+ messageWA[key])+'%0a'
     }
 
-    messageWA = {}
+    delete messageWA
 
     window.location.replace(url_wa);
 })
