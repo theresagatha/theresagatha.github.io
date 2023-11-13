@@ -6,7 +6,8 @@
     <!--- bootstrap cdn --->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="/assets/img/labora-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>LABORA</title>
@@ -31,11 +32,15 @@
                         <div class="form-title">
                             <h3>Isi Permohonan</h3>
                         </div>
-                        <form>
+                        <form id="billingForm">
                             <div class="form-group row">
                                 <label for="inputNPWP" class="col-sm-4 col-form-label">NPWP</label>
                                 <div class="col-sm-8">
                                     <input type="number" class="form-control" id="inputNPWP" placeholder="NPWP">
+                                    <div class="tooltip-info">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span class="tooltiptext">Penulisan NPWP tanpa tanda baca, hanya angka saja. Jika tidak ada NPWP silakan isi 000000000714000</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -47,9 +52,38 @@
                             <div class="form-group row">
                                 <label for="inputJenisPajak" class="col-sm-4 col-form-label">Jenis Pajak</label>
                                 <div class="col-sm-8">
-                                    <select id="inputJenisPajak" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
+                                    <select id="inputJenisPajak" class="form-control" onchange="populate(this.id,'inputJenisSetoran')">
+                                        <option selected>Pilih Jenis Pajak</option>
+                                        <option value="PPh Minyak Bumi">PPh Minyak Bumi</option>
+                                        <option value="Gas Alam">Gas Alam</option>
+                                        <option value="PPh Migas Lainnya">PPh Migas Lainnya</option>
+                                        <option value="PPh Pasal 21">PPh Pasal 21</option>
+                                        <option value="PPh Pasal 22">PPh Pasal 22</option>
+                                        <option value="PPh Pasal 22 Impor">PPh Pasal 22 Impor</option>
+                                        <option value="PPh Pasal 23">PPh Pasal 23</option>
+                                        <option value="PPh Pasal 25 Badan">PPh Pasal 25 Badan</option>
+                                        <option value="PPh Pasal 26">PPh Pasal 26</option>
+                                        <option value="PPh Final">PPh Final</option>
+                                        <option value="PPh Non-Migas Lainnya">PPh Non-Migas Lainnya</option>
+                                        <option value="PPN Dalam Negeri">PPN Dalam Negeri</option>
+                                        <option value="PPN Impor">PPN Impor</option>
+                                        <option value="PPN Lainnya">PPN Lainnya</option>
+                                        <option value="PPn BM Dalam Negeri">PPn BM Dalam Negeri</option>
+                                        <option value="PPn BM Impor">PPn BM Impor</option>
+                                        <option value="PPn BM Lainnya">PPn BM Lainnya</option>
+                                        <option value="PBB Perkebunan">PBB Perkebunan</option>
+                                        <option value="PBB Perhutanan">PBB Perhutanan</option>
+                                        <option value="PBB Pertambangan Minerba">PBB Pertambangan Minerba</option>
+                                        <option value="PBB Pertambangan Pabum">PBB Pertambangan Pabum</option>
+                                        <option value="PBB Sektor Lainnya">PBB Sektor Lainnya</option>
+                                        <option value="Bea Materai">Bea Materai</option>
+                                        <option value="PPn Benda Meterai">PPn Benda Meterai</option>
+                                        <option value="PPn Batubara">PPn Batubara</option>
+                                        <option value="Pajak Tdk Langsung Lainny">Pajak Tdk Langsung Lainny</option>
+                                        <option value="Bunga/Denda Penagihan PPh">Bunga/Denda Penagihan PPh</option>
+                                        <option value="Bunga/Denda Penagihan PPN">Bunga/Denda Penagihan PPN</option>
+                                        <option value="Bunga/Denda Penagihan PPn BM">Bunga/Denda Penagihan PPn BM</option>
+                                        <option value="Bunga/Denda Penagihan PTLL">Bunga/Denda Penagihan PTLL</option>
                                     </select>
                                 </div>
                             </div>
@@ -57,17 +91,27 @@
                                 <label for="inputJenisSetoran" class="col-sm-4 col-form-label">Jenis Setoran</label>
                                 <div class="col-sm-8">
                                     <select id="inputJenisSetoran" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
+                                        <option selected>Pilih Jenis Setoran</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="inputMasa Pajak" class="col-sm-4 col-form-label">Masa Pajak</label>
                                 <div class="col-sm-8">
-                                    <select id="inputMasa Pajak" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
+                                    <select id="inputMasaPajak" class="form-control">
+                                        <option selected>Pilih Masa Pajak</option>
+                                        <option value="Januari">Januari</option>
+                                        <option value="Februari">Februari</option>
+                                        <option value="Maret">Maret</option>
+                                        <option value="April">April</option>
+                                        <option value="Mei">Mei</option>
+                                        <option value="Juni">Juni</option>
+                                        <option value="Juli">Juli</option>
+                                        <option value="Agustus">Agustus</option>
+                                        <option value="September">September</option>
+                                        <option value="Oktober">Oktober</option>
+                                        <option value="November">November</option>
+                                        <option value="Desember">Desember</option>
                                     </select>
                                 </div>
                             </div>
@@ -102,5 +146,6 @@
             </div>
         </div>
     </main>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>

@@ -69,3 +69,25 @@ body {
     margin: 10px 0;
     color: #121b3c;
 }
+
+.tooltip-info h1 {
+    color: #f4b800;
+}
+
+.tooltip-info .tooltiptext {
+    visibility: hidden;
+    width: 392px;
+    background-color: #f4b800;
+    color: #121b3c;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip-info:hover .tooltiptext {
+    visibility: visible;
+  }
