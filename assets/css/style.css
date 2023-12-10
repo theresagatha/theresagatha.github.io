@@ -67,6 +67,7 @@ body {
 
 .btn-custom {
     margin: 10px 0;
+    font-size: 19px;
     color: #121b3c;
 }
 
@@ -86,8 +87,12 @@ body {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-  }
-  
-  .tooltip-info:hover .tooltiptext {
+}
+
+.tooltip-info:hover .tooltiptext {
     visibility: visible;
-  }
+}
+
+h3 {
+    font-size: 23px;
+}
