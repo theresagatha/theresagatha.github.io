@@ -477,6 +477,7 @@ billingForm.addEventListener("submit", (e) => {
         nama: document.getElementById("inputNama").value,
         jenisPajak: document.getElementById("inputJenisPajak").value,
         jenisSetoran: document.getElementById("inputJenisSetoran").value,
+        nop: document.getElementById("inputNop").value,
         masa: document.getElementById("inputMasaPajak").value,
         tahunPajak: document.getElementById("inputTahunPajak").value,
         jumlahSetor: document.getElementById("inputJumlahSetor").value,
@@ -484,7 +485,7 @@ billingForm.addEventListener("submit", (e) => {
         nomorWhatsApp: document.getElementById("inputNomorWhatsApp").value
     }
 
-    let url_wa = 'https://wa.me/6285171195170?text='
+    let url_wa = 'https://wa.me/6282299999714?text='
     
     for (const key in messageWA) {
         url_wa += encodeURI(key +': '+ messageWA[key])+'%0a'
