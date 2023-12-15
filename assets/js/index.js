@@ -7,7 +7,7 @@ function populate(option1,option2) {
     if(option1.value  == 'PPh Minyak Bumi' || option1.value  == 'Gas Alam' || option1.value  == 'PPh Migas Lainnya')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Tahunan',
             'STP',
             'SKPKB',
@@ -18,7 +18,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Migas Lainnya')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'STP',
             'SKPKB',
             'SKPKBT',
@@ -28,7 +28,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Pasal 21')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'Pembayaran Pendahuluan SKP',
             'STP',
@@ -47,7 +47,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Pasal 22')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa oleh Pihak Lain',
             'Pembayaran masa atas BAPK/BAP',
             'Pembayaran Pendahuluan SKP',
@@ -70,7 +70,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Pasal 22 Impor')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'Pembayaran Pendahuluan SKP',
             'STP',
@@ -87,7 +87,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Pasal 23')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Deviden',
             'Bunga',
             'Royalti',
@@ -112,7 +112,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Pasal 25 Badan')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'Pembayaran Pendahuluan SKP',
             'Tahunan',
@@ -130,7 +130,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Pasal 26')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Deviden',
             'Bunga',
             'Royalti',
@@ -204,7 +204,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPh Non-Migas Lainnya')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Ps 15 Jasa Penerbangan Dalam Negeri',
             'Pembayaran masa atas BAPK/BAP',
             'STP',
@@ -225,7 +225,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPN Dalam Negeri')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'BKP tak berwujud dari luar Daerah Pabeaan',
             'JKP dari luar Daerah Pabeaan',
             'Kegiatan Membangun Sendiri',
@@ -258,7 +258,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPN Impor')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'PPN Impor semula dapat fasilitas dapat dikreditkan',
             'PPN Impor semula dapat fasilitas tidak dapat dikreditkan',
@@ -277,7 +277,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPN Lainnya')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'Keg. Perdagangan Melalui Sistem Elektronik (PMSE)',
             'STP',
@@ -299,7 +299,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPn BM Dalam Negeri')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'PPnBM atas penyerahan BKP di KPBPB',
             'STP',
@@ -318,7 +318,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPn BM Impor')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'STP',
             'SKPKB',
@@ -334,7 +334,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPn BM Lainnya')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'Pembayaran masa atas BAPK/BAP',
             'STP',
             'SKPKB',
@@ -430,7 +430,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'PPn Batubara')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'STP',
             'SKPKB',
             'SKPKBT',
@@ -440,7 +440,7 @@ function populate(option1,option2) {
     else if(option1.value  == 'Pajak Tdk Langsung Lainnya')
     {
         var optionArray = [
-            'Masa',
+            'Jenis Setoran',
             'STP',
             'SKPKB',
             'SKPKBT',
@@ -478,7 +478,7 @@ billingForm.addEventListener("submit", (e) => {
         jenisPajak: document.getElementById("inputJenisPajak").value,
         jenisSetoran: document.getElementById("inputJenisSetoran").value,
         nop: document.getElementById("inputNop").value,
-        masa: document.getElementById("inputMasaPajak").value,
+        masa: document.getElementById("inputJenis SetoranPajak").value,
         tahunPajak: document.getElementById("inputTahunPajak").value,
         jumlahSetor: document.getElementById("inputJumlahSetor").value,
         uraian: document.getElementById("inputUraian").value,
